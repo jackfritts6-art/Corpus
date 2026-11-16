@@ -1,69 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Average American Family Income - Corpus</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #f9f9f9;
-        }
-        header {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #1a1a1a;
-            margin-top: 0;
-        }
-        section {
-            background: #ffffff;
-            margin-bottom: 20px;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .embed-container {
-            position: relative;
-            width: 100%;
-            height: 700px;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 6px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A digital humanities comparison of U.S. presidential inaugural addresses using Voyant Tools.">
+  <title>Presidential Voices Across Two Centuries | Corpus Analysis</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Average American Family Income</h1>
-        <p>Exploring data, economic trends, and text analytics for household income statistics across the United States.</p>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Overview</h2>
-            <p>This digital research corpus analyzes text and data regarding average American family incomes.</p>
-        </section>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-        <section>
-            <h2>Voyant Tools Analysis</h2>
-            <p>Explore the interactive text analysis and word frequencies below:</p>
-            <div class="embed-container">
-                <iframe src="https://voyant-tools.org/?corpus=b54b3ce162b8141806daa6a0b42e312f" title="Voyant Tools Corpus Viewer"></iframe>
-            </div>
-        </section>
-    </main>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#top">DIGIT 100 <span>/ CORPUS ANALYSIS</span></a>
+      <div class="nav-links">
+        <a href="#about">Project</a>
+        <a href="#visuals">Visuals</a>
+        <a href="#findings">Findings</a>
+        <a href="#sources">Sources</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">A digital humanities text analysis</p>
+        <h1>Presidential Voices <em>Across Two Centuries</em></h1>
+        <p class="hero-intro">How does the language of an inaugural address change when the historical moment changes? I used Voyant Tools to explore word patterns in speeches from 1793, 1801, 1981, and 2009.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#visuals">View the visual analysis</a>
+          <a class="button button-outline" href="https://voyant-tools.org/?corpus=8f9027141c7d1f5c5ac8d2b983479d80" target="_blank" rel="noopener noreferrer">Explore the live Voyant corpus ↗</a>
+        </div>
+        <div class="stats" aria-label="Corpus summary">
+          <div><strong>4</strong><span>speeches</span></div>
+          <div><strong>6,700</strong><span>total words in Voyant</span></div>
+          <div><strong>1793–2009</strong><span>historical range</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 / The project</p>
+        <h2>Studying language, not just history</h2>
+      </div>
+      <div class="two-column">
+        <div>
+          <p>Presidents address the country at moments of transition. Although all four speeches belong to the same genre, they were written for different audiences and circumstances. My central question is: <strong>How do Jefferson, Reagan, and Obama differ in their language about government, national identity, and shared responsibility?</strong></p>
+          <p>I added Washington's brief 1793 address as extra historical context. The closer comparison focuses on three speeches—Jefferson (1801), Reagan (1981), and Obama (2009).</p>
+        </div>
+        <aside class="note">
+          <h3>How I analyzed the texts</h3>
+          <p>I used plain-text inaugural addresses from our class's <a href="https://github.com/newtfire/introDH-Hub/tree/master/textFiles/inaugural" target="_blank" rel="noopener noreferrer">introDH-Hub collection</a>, loaded them as separate documents in Voyant Tools, and examined Cirrus, Trends, and Summary. The screenshots below document this analysis.</p>
+        </aside>
+      </div>
+
+      <div class="speech-grid" aria-label="Speeches included in the corpus">
+        <article class="speech-card"><span class="year">1793</span><h3>George Washington</h3><p>A short historical point of reference.</p><a href="https://github.com/newtfire/introDH-Hub/blob/master/textFiles/inaugural/1793-Washington.txt" target="_blank" rel="noopener noreferrer">Read the text ↗</a></article>
+        <article class="speech-card"><span class="year">1801</span><h3>Thomas Jefferson</h3><p>Main comparison: principles and government.</p><a href="https://github.com/newtfire/introDH-Hub/blob/master/textFiles/inaugural/1801-Jefferson.txt" target="_blank" rel="noopener noreferrer">Read the text ↗</a></article>
+        <article class="speech-card"><span class="year">1981</span><h3>Ronald Reagan</h3><p>Main comparison: government and national identity.</p><a href="https://github.com/newtfire/introDH-Hub/blob/master/textFiles/inaugural/1981-Reagan.txt" target="_blank" rel="noopener noreferrer">Read the text ↗</a></article>
+        <article class="speech-card"><span class="year">2009</span><h3>Barack Obama</h3><p>Main comparison: national renewal.</p><a href="https://github.com/newtfire/introDH-Hub/blob/master/textFiles/inaugural/2009-Obama.txt" target="_blank" rel="noopener noreferrer">Read the text ↗</a></article>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="visuals">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">02 / Voyant screenshots</p>
+          <h2>What the text looks like as data</h2>
+          <p>These are captures from my four-document Voyant corpus. Each visualization shows something different: which words are common overall, and how their use varies by speech.</p>
+        </div>
+        <div class="visual-grid">
+          <figure class="visual-card">
+            <img src="presidential-wordcloud.png" alt="Voyant Cirrus word cloud with government largest, alongside nation, people, freedom, world, and other prominent terms" loading="lazy">
+            <figcaption><strong>Figure 1. Cirrus word cloud.</strong> The most prominent words across the four speeches include <em>government</em>, <em>nation</em>, <em>let</em>, <em>people</em>, and <em>world</em>. This gives an overview of common vocabulary, but it does not show how each president used those words.</figcaption>
+          </figure>
+          <figure class="visual-card">
+            <img src="presidential-trends.png" alt="Voyant Trends chart comparing relative frequency of government, nation, let, people, and world across the four speeches" loading="lazy">
+            <figcaption><strong>Figure 2. Trends by speech.</strong> The graph compares relative word frequencies instead of raw counts. This matters because Washington's address is dramatically shorter than the others. <em>Government</em> appears prominently in Jefferson's and Reagan's speeches, while <em>nation</em> is more prominent in Obama's.</figcaption>
+          </figure>
+        </div>
+
+        <div class="frequency">
+          <h3>Most frequent content words in the four-speech corpus</h3>
+          <div class="bar-list" aria-label="Most common words and their Voyant counts">
+            <div class="bar-row"><span>government</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><strong>32</strong></div>
+            <div class="bar-row"><span>nation</span><div class="bar-track"><div class="bar-fill" style="width:62.5%"></div></div><strong>20</strong></div>
+            <div class="bar-row"><span>let</span><div class="bar-track"><div class="bar-fill" style="width:62.5%"></div></div><strong>20</strong></div>
+            <div class="bar-row"><span>people</span><div class="bar-track"><div class="bar-fill" style="width:59.375%"></div></div><strong>19</strong></div>
+            <div class="bar-row"><span>world</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><strong>16</strong></div>
+          </div>
+          <p class="small-text">Source: Voyant Tools, Summary panel. Counts reflect its current corpus and settings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="findings">
+      <div class="section-heading">
+        <p class="eyebrow">03 / Comparison</p>
+        <h2>Three speeches, different emphases</h2>
+        <p>The word frequencies give clues about recurring themes. Reading the words in context helps clarify what they mean.</p>
+      </div>
+      <div class="finding-list">
+        <article class="finding">
+          <span class="finding-number">01</span>
+          <div><h3>Jefferson (1801): principles and public opinion</h3><p>Voyant identifies <em>principle</em> (6 appearances) and <em>opinion</em> (4) as relatively distinctive terms. His speech repeatedly discusses political disagreement and the principles of government. In one passage he refers to a “wise and frugal Government,” showing why counting the word <em>government</em> alone cannot explain his argument.</p></div>
+        </article>
+        <article class="finding">
+          <span class="finding-number">02</span>
+          <div><h3>Reagan (1981): government and national identity</h3><p>Reagan uses <em>government</em> frequently, and Voyant highlights <em>americans</em> (9) and <em>national</em> (5) as distinctive words. Reading the passages around <em>government</em> shows that he discusses its limits, responsibilities, and relationship to citizens. The frequency is interesting because it points toward a recurring subject, not necessarily approval of that subject.</p></div>
+        </article>
+        <article class="finding">
+          <span class="finding-number">03</span>
+          <div><h3>Obama (2009): new beginnings and national identity</h3><p>Voyant highlights <em>new</em> (11) and <em>spirit</em> (5) as distinctive words in Obama's speech. His use of <em>nation</em> is also prominent in the Trends visualization. These patterns suggest an emphasis on collective identity and national renewal, which is worth investigating through repeated phrases and the surrounding sentences.</p></div>
+        </article>
+      </div>
+
+      <div class="method-note">
+        <h3>A limitation worth noticing</h3>
+        <p>Washington's 1793 address contains only 135 words, compared with 1,730 in Jefferson's, 2,436 in Reagan's, and 2,399 in Obama's, according to Voyant. A single appearance can look unusually important in such a short text. For comparisons, the relative-frequency graph is more useful than raw word totals. Repeated vocabulary also cannot prove a speaker's intentions or explain later political outcomes.</p>
+      </div>
+
+      <div class="next-step">
+        <div>
+          <p class="eyebrow">04 / Next stage of research</p>
+          <h2>Moving from words to phrases</h2>
+          <p>The next part of this project is an AntConc n-gram and keyword-in-context comparison. I will search for two- and three-word patterns such as <em>we will</em> and <em>let us</em>, then compare how those phrases appear in the individual speeches. That will make the argument more specific than a word cloud alone.</p>
+          <p class="small-text">This section describes planned analysis; AntConc results and screenshots have not yet been added.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="sources">
+      <div class="wrap source-section">
+        <div>
+          <p class="eyebrow">05 / Sources and tools</p>
+          <h2>Explore the evidence</h2>
+          <p>All four primary texts are drawn from the course's public GitHub collection. The interactive Voyant corpus can be explored separately from the static screenshots shown on this page.</p>
+          <ul>
+            <li><a href="https://github.com/newtfire/introDH-Hub/tree/master/textFiles/inaugural" target="_blank" rel="noopener noreferrer">Class inaugural-address text collection</a></li>
+            <li><a href="https://voyant-tools.org/?corpus=8f9027141c7d1f5c5ac8d2b983479d80" target="_blank" rel="noopener noreferrer">My four-document Voyant corpus</a></li>
+            <li><a href="https://newtfire.org/courses/introDH/AntConAssign.html" target="_blank" rel="noopener noreferrer">Corpus Analysis assignment overview</a></li>
+          </ul>
+        </div>
+        <div class="source-callout">
+          <h3>Research note</h3>
+          <p>The figures show an exploratory reading of texts with computer-assisted analysis. Word counts, the author's interpretation, and the historical speeches should be examined together.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap"><span>Presidential Voices Across Two Centuries</span><a href="#top">Back to top ↑</a></div>
+  </footer>
 </body>
 </html>
