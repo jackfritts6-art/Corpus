@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A digital humanities comparison of U.S. presidential inaugural addresses using Voyant Tools.">
+  <meta name="description" content="A digital humanities comparison of U.S. presidential inaugural addresses using Voyant Tools and AntConc.">
   <title>Presidential Voices Across Two Centuries | Corpus Analysis</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,6 +17,7 @@
         <a href="#about">Project</a>
         <a href="#visuals">Visuals</a>
         <a href="#findings">Findings</a>
+        <a href="#antconc">AntConc</a>
         <a href="#sources">Sources</a>
       </div>
     </nav>
@@ -27,7 +28,7 @@
       <div class="wrap">
         <p class="eyebrow">A digital humanities text analysis</p>
         <h1>Presidential Voices <em>Across Two Centuries</em></h1>
-        <p class="hero-intro">How does the language of an inaugural address change when the historical moment changes? I used Voyant Tools to explore word patterns in speeches from 1793, 1801, 1981, and 2009.</p>
+        <p class="hero-intro">How does the language of an inaugural address change when the historical moment changes? I used Voyant Tools and AntConc to explore word and phrase patterns in speeches from 1793, 1801, 1981, and 2009.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#visuals">View the visual analysis</a>
           <a class="button button-outline" href="https://voyant-tools.org/?corpus=8f9027141c7d1f5c5ac8d2b983479d80" target="_blank" rel="noopener noreferrer">Explore the live Voyant corpus ↗</a>
@@ -52,7 +53,7 @@
         </div>
         <aside class="note">
           <h3>How I analyzed the texts</h3>
-          <p>I used plain-text inaugural addresses from our class's <a href="https://github.com/newtfire/introDH-Hub/tree/master/textFiles/inaugural" target="_blank" rel="noopener noreferrer">introDH-Hub collection</a>, loaded them as separate documents in Voyant Tools, and examined Cirrus, Trends, and Summary. The screenshots below document this analysis.</p>
+          <p>I used plain-text inaugural addresses from our class's <a href="https://github.com/newtfire/introDH-Hub/tree/master/textFiles/inaugural" target="_blank" rel="noopener noreferrer">introDH-Hub collection</a>, loaded them as separate documents in Voyant Tools, and examined Cirrus, Trends, and Summary. I used AntConc to compare repeated phrases and see how individual speakers used them.</p>
         </aside>
       </div>
 
@@ -113,7 +114,7 @@
         </article>
         <article class="finding">
           <span class="finding-number">03</span>
-          <div><h3>Obama (2009): new beginnings and national identity</h3><p>Voyant highlights <em>new</em> (11) and <em>spirit</em> (5) as distinctive words in Obama's speech. His use of <em>nation</em> is also prominent in the Trends visualization. These patterns suggest an emphasis on collective identity and national renewal, which is worth investigating through repeated phrases and the surrounding sentences.</p></div>
+          <div><h3>Obama (2009): new beginnings and national identity</h3><p>Voyant highlights <em>new</em> (11) and <em>spirit</em> (5) as distinctive words in Obama's speech. His use of <em>nation</em> is also prominent in the Trends visualization. These patterns suggest an emphasis on collective identity and national renewal, which I explore further in the AntConc comparison.</p></div>
         </article>
       </div>
 
@@ -122,14 +123,33 @@
         <p>Washington's 1793 address contains only 135 words, compared with 1,730 in Jefferson's, 2,436 in Reagan's, and 2,399 in Obama's, according to Voyant. A single appearance can look unusually important in such a short text. For comparisons, the relative-frequency graph is more useful than raw word totals. Repeated vocabulary also cannot prove a speaker's intentions or explain later political outcomes.</p>
       </div>
 
-      <div class="next-step">
-        <div>
-          <p class="eyebrow">04 / Next stage of research</p>
-          <h2>Moving from words to phrases</h2>
-          <p>The next part of this project is an AntConc n-gram and keyword-in-context comparison. I will search for two- and three-word patterns such as <em>we will</em> and <em>let us</em>, then compare how those phrases appear in the individual speeches. That will make the argument more specific than a word cloud alone.</p>
-          <p class="small-text">This section describes planned analysis; AntConc results and screenshots have not yet been added.</p>
-        </div>
-      </div>
+      <section class="next-step" id="antconc" aria-labelledby="antconc-title">
+        <p class="eyebrow">04 / AntConc</p>
+        <h2 id="antconc-title">From repeated phrases to context</h2>
+        <p>I ran AntConc on the same four speech files used in Voyant, including Washington’s 1793 address. I compared consecutive two- and three-word sequences with case matching off. In the tables, <em>frequency</em> is the total number of occurrences and <em>range</em> is the number of speeches containing the phrase.</p>
+
+        <figure class="visual-card antconc-figure">
+          <a href="antconc-bigrams.jpg"><img src="antconc-bigrams.jpg" width="1120" height="600" alt="AntConc bigram rankings. Of the leads with 53 hits across four speeches. We will ranks fifth with 23 hits across two speeches." loading="lazy"></a>
+          <figcaption><strong>Figure 3. Two-word phrases in AntConc.</strong> <em>Of the</em> leads with 53 occurrences across all four speeches. <em>We will</em> ranks fifth with 23 occurrences across two speeches. The shorter sequence identifies a shared pattern of making promises, and the third word helps narrow the comparison.</figcaption>
+        </figure>
+
+        <figure class="visual-card antconc-figure">
+          <a href="antconc-trigrams.jpg"><img src="antconc-trigrams.jpg" width="1120" height="1400" alt="AntConc trigram rankings showing we will not four times across two files, and of the public and the federal government three times each across one file apiece." loading="lazy"></a>
+          <figcaption><strong>Figure 4. Three-word phrases in AntConc.</strong> <em>We will not</em> appears four times across two speeches. <em>Of the public</em> and <em>the federal government</em> each appear three times, each in a single speech. Reading the source files places the first phrase in Jefferson and the second in Reagan.</figcaption>
+        </figure>
+
+        <p>Jefferson uses <em>of the public</em> in passages about public order, public faith, and public reason. The phrase links civic order with obligations such as paying public debts and holding abuses up to public scrutiny. Reagan repeats <em>the federal government</em> three times in one paragraph to emphasize the division of power between the federal government and the states. Voyant made <em>government</em> stand out in both speeches, and these passages show how differently the speakers frame it.</p>
+
+        <figure class="visual-card antconc-figure">
+          <a href="antconc-kwic.jpg"><img src="antconc-kwic.jpg" width="1710" height="545" alt="Four AntConc concordance lines for we will not. The following verbs are apologize and give in Obama, and surrender and use in Reagan." loading="lazy"></a>
+          <figcaption><strong>Figure 5. <em>We will not</em> in context.</strong> AntConc returns two hits in Reagan (1981) and two in Obama (2009), with zero hits in Jefferson or Washington. The different verbs after the phrase point to different commitments.</figcaption>
+        </figure>
+
+        <p>Reagan pledges to avoid using friendship to impose on other countries’ sovereignty and rules out surrender in the pursuit of peace. Obama refuses to give up American ideals for expedience or apologize for the American way of life. Both use the same construction when addressing an international audience. Reagan emphasizes sovereignty and resolve, while Obama describes principles he presents as part of America’s national identity.</p>
+
+        <h3>What the comparison shows</h3>
+        <p>Jefferson’s language of public duty, Reagan’s focus on the division of government power, and Obama’s defense of national ideals emerged from reading repeated phrases in context. The equal counts for <em>we will not</em> were especially revealing. Reagan and Obama used the same wording to draw different lines about what the United States would refuse to do. With three speeches in the main comparison, these patterns describe the selected addresses.</p>
+      </section>
     </section>
 
     <section class="section section-tinted" id="sources">
@@ -137,10 +157,11 @@
         <div>
           <p class="eyebrow">05 / Sources and tools</p>
           <h2>Explore the evidence</h2>
-          <p>All four primary texts are drawn from the course's public GitHub collection. The interactive Voyant corpus can be explored separately from the static screenshots shown on this page.</p>
+          <p>All four primary texts are drawn from the course's public GitHub collection. The interactive Voyant corpus lets you explore the word patterns behind the screenshots.</p>
           <ul>
             <li><a href="https://github.com/newtfire/introDH-Hub/tree/master/textFiles/inaugural" target="_blank" rel="noopener noreferrer">Class inaugural-address text collection</a></li>
             <li><a href="https://voyant-tools.org/?corpus=8f9027141c7d1f5c5ac8d2b983479d80" target="_blank" rel="noopener noreferrer">My four-document Voyant corpus</a></li>
+            <li><a href="https://www.laurenceanthony.net/software/antconc/" target="_blank" rel="noopener noreferrer">AntConc</a></li>
             <li><a href="https://newtfire.org/courses/introDH/AntConAssign.html" target="_blank" rel="noopener noreferrer">Corpus Analysis assignment overview</a></li>
           </ul>
         </div>

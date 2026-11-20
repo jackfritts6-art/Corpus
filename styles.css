@@ -110,3 +110,7 @@ h3 {font-size:1.23rem;color:var(--forest);line-height:1.4;margin-bottom:10px;}
   .visual-card img {padding:5px;}
 }
 @media (prefers-reduced-motion:reduce) {html {scroll-behavior:auto;}}
+
+.antconc-figure {margin: 24px 0;}
+.antconc-figure img {height: auto; max-height: none; padding: 0;}
+.antconc-figure a {display: block;}
