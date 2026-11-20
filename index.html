@@ -6,6 +6,7 @@
   <meta name="description" content="A digital humanities comparison of U.S. presidential inaugural addresses using Voyant Tools and AntConc.">
   <title>Presidential Voices Across Two Centuries | Corpus Analysis</title>
   <link rel="stylesheet" href="styles.css">
+  <style>h1 span {color: var(--accent); font-weight: 400;}</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -27,8 +28,8 @@
     <section class="hero" id="top">
       <div class="wrap">
         <p class="eyebrow">A digital humanities text analysis</p>
-        <h1>Presidential Voices <em>Across Two Centuries</em></h1>
-        <p class="hero-intro">How does the language of an inaugural address change when the historical moment changes? I used Voyant Tools and AntConc to explore word and phrase patterns in speeches from 1793, 1801, 1981, and 2009.</p>
+        <h1>Presidential Voices <span>Across Two Centuries</span></h1>
+        <p class="hero-intro">How does inaugural language change over time? Voyant and AntConc help compare four speeches from 1793 to 2009.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#visuals">View the visual analysis</a>
           <a class="button button-outline" href="https://voyant-tools.org/?corpus=8f9027141c7d1f5c5ac8d2b983479d80" target="_blank" rel="noopener noreferrer">Explore the live Voyant corpus ↗</a>
@@ -53,7 +54,7 @@
         </div>
         <aside class="note">
           <h3>How I analyzed the texts</h3>
-          <p>I used plain-text inaugural addresses from our class's <a href="https://github.com/newtfire/introDH-Hub/tree/master/textFiles/inaugural" target="_blank" rel="noopener noreferrer">introDH-Hub collection</a>, loaded them as separate documents in Voyant Tools, and examined Cirrus, Trends, and Summary. I used AntConc to compare repeated phrases and see how individual speakers used them.</p>
+          <p>I used plain-text inaugural addresses from our class’s <a href="https://github.com/newtfire/introDH-Hub/tree/master/textFiles/inaugural" target="_blank" rel="noopener noreferrer">introDH-Hub collection</a>. Voyant shows word frequencies, and AntConc shows repeated phrases in context.</p>
         </aside>
       </div>
 
@@ -70,16 +71,16 @@
         <div class="section-heading">
           <p class="eyebrow">02 / Voyant screenshots</p>
           <h2>What the text looks like as data</h2>
-          <p>These are captures from my four-document Voyant corpus. Each visualization shows something different: which words are common overall, and how their use varies by speech.</p>
+          <p>Voyant shows common words and how their frequency varies by speech.</p>
         </div>
         <div class="visual-grid">
           <figure class="visual-card">
             <img src="presidential-wordcloud.png" alt="Voyant Cirrus word cloud with government largest, alongside nation, people, freedom, world, and other prominent terms" loading="lazy">
-            <figcaption><strong>Figure 1. Cirrus word cloud.</strong> The most prominent words across the four speeches include <em>government</em>, <em>nation</em>, <em>let</em>, <em>people</em>, and <em>world</em>. This gives an overview of common vocabulary, but it does not show how each president used those words.</figcaption>
+            <figcaption><strong>Figure 1. Cirrus word cloud.</strong> Government is the most prominent word in the Voyant cloud.</figcaption>
           </figure>
           <figure class="visual-card">
             <img src="presidential-trends.png" alt="Voyant Trends chart comparing relative frequency of government, nation, let, people, and world across the four speeches" loading="lazy">
-            <figcaption><strong>Figure 2. Trends by speech.</strong> The graph compares relative word frequencies instead of raw counts. This matters because Washington's address is dramatically shorter than the others. <em>Government</em> appears prominently in Jefferson's and Reagan's speeches, while <em>nation</em> is more prominent in Obama's.</figcaption>
+            <figcaption><strong>Figure 2. Trends by speech.</strong> Government stands out in Jefferson and Reagan. Nation is more prominent in Obama.</figcaption>
           </figure>
         </div>
 
@@ -101,54 +102,54 @@
       <div class="section-heading">
         <p class="eyebrow">03 / Comparison</p>
         <h2>Three speeches, different emphases</h2>
-        <p>The word frequencies give clues about recurring themes. Reading the words in context helps clarify what they mean.</p>
+        <p>The surrounding passages help explain how each president uses recurring words.</p>
       </div>
       <div class="finding-list">
         <article class="finding">
           <span class="finding-number">01</span>
-          <div><h3>Jefferson (1801): principles and public opinion</h3><p>Voyant identifies <em>principle</em> (6 appearances) and <em>opinion</em> (4) as relatively distinctive terms. His speech repeatedly discusses political disagreement and the principles of government. In one passage he refers to a “wise and frugal Government,” showing why counting the word <em>government</em> alone cannot explain his argument.</p></div>
+          <div><h3>Jefferson (1801): principles and public opinion</h3><p>Voyant highlights principle (6) and opinion (4). Jefferson discusses political disagreement and calls for a “wise and frugal Government.”</p></div>
         </article>
         <article class="finding">
           <span class="finding-number">02</span>
-          <div><h3>Reagan (1981): government and national identity</h3><p>Reagan uses <em>government</em> frequently, and Voyant highlights <em>americans</em> (9) and <em>national</em> (5) as distinctive words. Reading the passages around <em>government</em> shows that he discusses its limits, responsibilities, and relationship to citizens. The frequency is interesting because it points toward a recurring subject, not necessarily approval of that subject.</p></div>
+          <div><h3>Reagan (1981): government and national identity</h3><p>Voyant highlights americans (9) and national (5). Reagan discusses the limits of government and its responsibilities to citizens.</p></div>
         </article>
         <article class="finding">
           <span class="finding-number">03</span>
-          <div><h3>Obama (2009): new beginnings and national identity</h3><p>Voyant highlights <em>new</em> (11) and <em>spirit</em> (5) as distinctive words in Obama's speech. His use of <em>nation</em> is also prominent in the Trends visualization. These patterns suggest an emphasis on collective identity and national renewal, which I explore further in the AntConc comparison.</p></div>
+          <div><h3>Obama (2009): new beginnings and national identity</h3><p>Voyant highlights new (11) and spirit (5). Nation also stands out in Obama’s speech, which emphasizes national renewal.</p></div>
         </article>
       </div>
 
       <div class="method-note">
         <h3>A limitation worth noticing</h3>
-        <p>Washington's 1793 address contains only 135 words, compared with 1,730 in Jefferson's, 2,436 in Reagan's, and 2,399 in Obama's, according to Voyant. A single appearance can look unusually important in such a short text. For comparisons, the relative-frequency graph is more useful than raw word totals. Repeated vocabulary also cannot prove a speaker's intentions or explain later political outcomes.</p>
+        <p>Voyant counts 135 words in Washington’s speech, 1,730 in Jefferson’s, 2,436 in Reagan’s, and 2,399 in Obama’s. Relative frequencies make these different lengths easier to compare.</p>
       </div>
 
       <section class="next-step" id="antconc" aria-labelledby="antconc-title">
         <p class="eyebrow">04 / AntConc</p>
         <h2 id="antconc-title">From repeated phrases to context</h2>
-        <p>I ran AntConc on the same four speech files used in Voyant, including Washington’s 1793 address. I compared consecutive two- and three-word sequences with case matching off. In the tables, <em>frequency</em> is the total number of occurrences and <em>range</em> is the number of speeches containing the phrase.</p>
+        <p>AntConc counted two- and three-word phrases in the same four speeches as Voyant, ignoring capitalization. Frequency counts hits. Range counts speeches with a hit.</p>
 
         <figure class="visual-card antconc-figure">
           <a href="antconc-bigrams.jpg?v=cropped"><img src="antconc-bigrams.jpg?v=cropped" width="1120" height="543" alt="AntConc bigram rankings. Of the leads with 53 hits across four speeches. We will ranks fifth with 23 hits across two speeches." loading="lazy"></a>
-          <figcaption><strong>Figure 3. Two-word phrases in AntConc.</strong> <em>Of the</em> leads with 53 occurrences across all four speeches. <em>We will</em> ranks fifth with 23 occurrences across two speeches. The shorter sequence identifies a shared pattern of making promises, and the third word helps narrow the comparison.</figcaption>
+          <figcaption><strong>Figure 3. Two-word phrases in AntConc.</strong> “Of the” leads with 53 hits across four speeches. “We will” ranks fifth with 23 hits across two speeches.</figcaption>
         </figure>
 
         <figure class="visual-card antconc-figure">
           <a href="antconc-trigrams.jpg?v=cropped"><img src="antconc-trigrams.jpg?v=cropped" width="1120" height="1343" alt="AntConc trigram rankings showing we will not four times across two files, and of the public and the federal government three times each across one file apiece." loading="lazy"></a>
-          <figcaption><strong>Figure 4. Three-word phrases in AntConc.</strong> <em>We will not</em> appears four times across two speeches. <em>Of the public</em> and <em>the federal government</em> each appear three times, each in a single speech. Reading the source files places the first phrase in Jefferson and the second in Reagan.</figcaption>
+          <figcaption><strong>Figure 4. Three-word phrases in AntConc.</strong> “We will not” appears four times across two speeches. “Of the public” appears three times in Jefferson, and “the federal government” appears three times in Reagan.</figcaption>
         </figure>
 
-        <p>Jefferson uses <em>of the public</em> in passages about public order, public faith, and public reason. The phrase links civic order with obligations such as paying public debts and holding abuses up to public scrutiny. Reagan repeats <em>the federal government</em> three times in one paragraph to emphasize the division of power between the federal government and the states. Voyant made <em>government</em> stand out in both speeches, and these passages show how differently the speakers frame it.</p>
+        <p>Jefferson invokes public order, public faith, and public reason to describe civic duties. Reagan repeats “the federal government” three times in one paragraph about the division of power between federal and state governments.</p>
 
         <figure class="visual-card antconc-figure">
           <a href="antconc-kwic.jpg?v=cropped"><img src="antconc-kwic.jpg?v=cropped" width="1710" height="488" alt="Four AntConc concordance lines for we will not. The following verbs are apologize and give in Obama, and surrender and use in Reagan." loading="lazy"></a>
-          <figcaption><strong>Figure 5. <em>We will not</em> in context.</strong> AntConc returns two hits in Reagan (1981) and two in Obama (2009), with zero hits in Jefferson or Washington. The different verbs after the phrase point to different commitments.</figcaption>
+          <figcaption><strong>Figure 5. “We will not” in context.</strong> Reagan and Obama each use “we will not” twice. Jefferson and Washington have no matches.</figcaption>
         </figure>
 
-        <p>Reagan pledges to avoid using friendship to impose on other countries’ sovereignty and rules out surrender in the pursuit of peace. Obama refuses to give up American ideals for expedience or apologize for the American way of life. Both use the same construction when addressing an international audience. Reagan emphasizes sovereignty and resolve, while Obama describes principles he presents as part of America’s national identity.</p>
+        <p>Reagan uses “we will not” to defend sovereignty and rule out surrender. Obama uses it to defend American ideals and a way of life.</p>
 
         <h3>What the comparison shows</h3>
-        <p>Jefferson’s language of public duty, Reagan’s focus on the division of government power, and Obama’s defense of national ideals emerged from reading repeated phrases in context. The equal counts for <em>we will not</em> were especially revealing. Reagan and Obama used the same wording to draw different lines about what the United States would refuse to do. With three speeches in the main comparison, these patterns describe the selected addresses.</p>
+        <p>Jefferson emphasizes public duty, Reagan emphasizes limits on federal power, and Obama emphasizes national ideals. The matching counts for “we will not” show how two speakers can use the same phrase to make different commitments.</p>
       </section>
     </section>
 
@@ -167,7 +168,7 @@
         </div>
         <div class="source-callout">
           <h3>Research note</h3>
-          <p>The figures show an exploratory reading of texts with computer-assisted analysis. Word counts, the author's interpretation, and the historical speeches should be examined together.</p>
+          <p>The charts show word and phrase patterns. The speeches provide the context for interpreting them.</p>
         </div>
       </div>
     </section>
